@@ -1,5 +1,5 @@
 <template>
-    <div>test/index页面内容</div>
+    <div>test/index.vue</div>
 </template>
 
 <route lang="yaml">

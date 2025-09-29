@@ -29,7 +29,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/i18n': RouteRecordInfo<'/posts/i18n', '/posts/i18n', Record<never, never>, Record<never, never>>,
     '/posts/test': RouteRecordInfo<'/posts/test', '/posts/test', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
-    '/test/': RouteRecordInfo<'/test/', '/test', Record<never, never>, Record<never, never>>,
+    '/test/index2': RouteRecordInfo<'/test/index2', '/test/index2', Record<never, never>, Record<never, never>>,
     '/test/test': RouteRecordInfo<'/test/test', '/test/test', Record<never, never>, Record<never, never>, '/test/test/test'>,
     '/test/test/test': RouteRecordInfo<'/test/test/test', '/test/test/test', Record<never, never>, Record<never, never>>,
   }
@@ -89,8 +89,8 @@ declare module 'vue-router/auto-routes' {
       routes: '/tags/'
       views: never
     }
-    '../theme/pages/test/index.vue': {
-      routes: '/test/'
+    '../theme/pages/test/index2.vue': {
+      routes: '/test/index2'
       views: never
     }
     '../theme/pages/test/test.vue': {

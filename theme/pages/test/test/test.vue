@@ -1,5 +1,5 @@
 <template>
-    <div>test页面内容</div>
+    <div>/test/test/test页面内容</div>
 </template>
 
 <route lang="yaml">
