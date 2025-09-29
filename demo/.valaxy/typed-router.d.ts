@@ -20,6 +20,9 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...path]': RouteRecordInfo<'/[...path]', '/:path(.*)', { path: ParamValue<true> }, { path: ParamValue<false> }>,
+    '/aaa/aaa': RouteRecordInfo<'/aaa/aaa', '/aaa/aaa', Record<never, never>, Record<never, never>, '/aaa/aaa/aaa'>,
+    '/aaa/aaa/aaa': RouteRecordInfo<'/aaa/aaa/aaa', '/aaa/aaa/aaa', Record<never, never>, Record<never, never>>,
+    '/abc/abc': RouteRecordInfo<'/abc/abc', '/abc/abc', Record<never, never>, Record<never, never>>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
     '/archives/': RouteRecordInfo<'/archives/', '/archives', Record<never, never>, Record<never, never>>,
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
@@ -29,7 +32,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/i18n': RouteRecordInfo<'/posts/i18n', '/posts/i18n', Record<never, never>, Record<never, never>>,
     '/posts/test': RouteRecordInfo<'/posts/test', '/posts/test', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
-    '/test/index2': RouteRecordInfo<'/test/index2', '/test/index2', Record<never, never>, Record<never, never>>,
     '/test/test': RouteRecordInfo<'/test/test', '/test/test', Record<never, never>, Record<never, never>, '/test/test/test'>,
     '/test/test/test': RouteRecordInfo<'/test/test/test', '/test/test/test', Record<never, never>, Record<never, never>>,
   }
@@ -51,6 +53,18 @@ declare module 'vue-router/auto-routes' {
     }
     '../node_modules/.pnpm/valaxy@0.26.6_@babel+parser_f75f45aa7c3eef36be8414c3bede4b7b/node_modules/valaxy/client/pages/[...path].vue': {
       routes: '/[...path]'
+      views: never
+    }
+    '../theme/pages/aaa/aaa.vue': {
+      routes: '/aaa/aaa' | '/aaa/aaa/aaa'
+      views: 'default'
+    }
+    '../theme/pages/aaa/aaa/aaa.vue': {
+      routes: '/aaa/aaa/aaa'
+      views: never
+    }
+    '../theme/pages/abc/abc.vue': {
+      routes: '/abc/abc'
       views: never
     }
     'pages/about.md': {
@@ -87,10 +101,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/tags/index.md': {
       routes: '/tags/'
-      views: never
-    }
-    '../theme/pages/test/index2.vue': {
-      routes: '/test/index2'
       views: never
     }
     '../theme/pages/test/test.vue': {
